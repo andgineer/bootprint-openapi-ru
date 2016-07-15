@@ -4,11 +4,11 @@
     @param {string} name the name of  the response header
     @api public
 --}}
-<tr class="sw-response-header-{{htmlId name}}">
-    <td>
+<tr>
+    <td class="swagger--summary-path">
         {{name}}
-    <td>{{md header.description}}</td>
-    <td>
+    <td class="swagger--summary-path">{{md header.description}}</td>
+    <td class="swagger--summary-path">
         {{>json-schema/datatype header}}
         {{#if header.items}}
             ,{{>json-schema/datatype header.items}}

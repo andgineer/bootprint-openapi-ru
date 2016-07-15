@@ -4,24 +4,24 @@
 
 --}}
 <h1>{{info.title}}</h1>
-<p class="sw-info">{{#if basePath}}Base URL: <span class="sw-info-basePath">{{basePath}}</span>, {{/if}}Version: <span class="sw-info-version">{{info.version}}</span></p>
+<p class="sw-info">{{#if basePath}}Базовый URL: <span class="sw-info-basePath">{{basePath}}</span>, {{/if}}Версия: <span class="sw-info-version">{{info.version}}</span></p>
 <p>{{md info.description}}</p>
 
 {{#if consumes}}
     <div id="sw-default-consumes" class="sw-default-value">
-        <span class="sw-default-value-header">Default request content-types:</span>
+        <span class="sw-default-value-header">Формат запросов по умолчанию (content-type):</span>
         {{#each consumes}}{{.}}{{#unless @last}}, {{/unless}}{{/each}}
     </div>
 {{/if}}
 {{#if produces}}
     <div id="sw-default-produces" class="sw-default-value">
-        <span class="sw-default-value-header">Default response content-types:</span>
+        <span class="sw-default-value-header">Формат ответов по умолчанию (content-type):</span>
         {{#each produces}}{{.}}{{#unless @last}}, {{/unless}}{{/each}}
     </div>
 {{/if}}
 
 <div id="sw-schemes" class="sw-default-value">
-    <span class="sw-default-value-header">Schemes:</span>
+    <span class="sw-default-value-header">Тип запросов:</span>
     {{#each schemes}}{{.}}{{#unless @last}}, {{/unless}}{{/each}}
 </div>
 
